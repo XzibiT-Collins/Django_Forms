@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends 'user_app/base.html' %}
+{% block body_block %}
+<!-- Index codes go here -->
+
+<h1>WELCOME TO POTFOLIO</h1>
+<a href="{% url 'user_app:register' %}">click here to Register</a>
+<a href="{% url 'index' %}">click here to Login</a>
+
+{% endblock %}
