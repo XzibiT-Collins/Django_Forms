@@ -1,4 +1,4 @@
-from django.urls import re_path
+from django.urls import path
 from user_app import views
 
 
@@ -8,6 +8,8 @@ app_name = 'user_app'
 
 
 urlpatterns = [
-    re_path(r'^register/',views.register, name ='register'),
-    re_path(r'^login/', views.login, name = 'name'),
+    path('register/',views.register, name ='register'),
+    path('user_login/', views.user_login, name='user_login'),
+    path('user_logout/', views.user_logout, name='user_logout'),
+    path('special_view/', views.special_view, name='special_view'),
 ]

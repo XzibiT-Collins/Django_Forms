@@ -4,7 +4,19 @@
 <!-- Index codes go here -->
 
 <h1>WELCOME TO POTFOLIO</h1>
-<a href="">click here to Register</a>
-<a href="">click here to Login</a>
+<a href="{% url 'user_app:register' %}">click here to Register</a>
+<a href="">Login Here</a>
+<form action="{% url 'user_app:user_login' %}">
+    
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" placeholder="Enter Username">
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" placeholder="Enter Password">
+
+    <input type="submit" name="" value="Login">
+
+</form>
 
 {% endblock %}

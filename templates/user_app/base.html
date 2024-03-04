@@ -13,9 +13,15 @@
         <div class="logo"></div>
         <div class="nav-links">
             <ul>
-                <li><a href="">Register</a></li>
-                <li><a href="">Login</a></li>
+                <li><a href="{% url 'admin:index' %}">Admin</a></li>
                 <li><a href="">About</a></li>
+                <!-- We need to show Login or Logout based on wether the user is logged in or out -->
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'user_logout' %}">Logout</a></li>
+                    <li><a href="{% url 'special_view' %}">Special</a></li>
+                {% else %}
+                    <li><a href="{% url 'user_login' %}">Login</a></li>
+                {% endif %}
             </ul>
         </div>
 

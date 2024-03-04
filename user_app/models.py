@@ -7,7 +7,7 @@ class userProfileInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     # Other fields we want to add
-    profile_pic = models.ImageField(upload_to='profile_pics')
+    profile_pic = models.ImageField(upload_to='profile_pics', blank=True, null=True)
     profile_link = models.URLField(blank=True)
 
     def __str__(self):

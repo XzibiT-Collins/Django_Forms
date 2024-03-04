@@ -22,5 +22,6 @@ from user_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",views.index, name='index'),
-    re_path(r'^user_app/', include('user_app.urls'))
+    re_path(r'^user_app/', include('user_app.urls')),
+
 ]
